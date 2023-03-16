@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(251, 222, 222, 0.896);
+}
+
+.btn {
+    width: 150px;
+    height: 60px;
+    display: flex;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: 500;
+    justify-content: center;
+    align-items: center;
+    background: #4a3f2f;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    transition: color 0.6s;
+    border-radius: 5px;
+    box-shadow: 5px 5px 18px #888888;
+}
+
+.btn span {
+    position: relative;
+    z-index: 10;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    background-color: rgb(191, 43, 250);
+    width: 0;
+    height: 0;
+    left: var(--xPos);
+    top: var(--yPos);
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    transition: width 0.5s, height 0.5s;
+}
+
+.btn:hover::before {
+    width: 320px;
+    height: 320px;
+}
